@@ -17,10 +17,16 @@
     main {
       flex: 1;
     }
+    .loading-animation {
+      width: 100%;
+      transition: width 1s linear;
+    }
   </style>
 </head>
 
 <body class="bg-[#171717] bg-[url('./assets/bg.png')] bg-cover bg-center min-h-screen w-full bg-no-repeat font-inter">
+  <!-- loading -->
+  <div id="loading-bar" class="absolute top-0 left-0 w-0 h-[1px] bg-gradient-to-r from-[#FF5151] to-[#993030] z-50"></div>
   <main>
     <!-- Navbar -->
     <div class="w-full flex justify-center items-center bg-[#0D0D0D]">
@@ -148,6 +154,7 @@
 
 <!-- js -->
 <script src="./scripts/navbar.js"></script>
+<script src="./scripts/loading.js"></script>
 </body>
 </html>
     
