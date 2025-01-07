@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <title>PirateLive.tv</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    main {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-[#171717] bg-[url('./assets/bg.png')] bg-cover bg-center min-h-screen w-full bg-no-repeat font-inter">
+  <main>
+    <!-- Navbar -->
+    <div class="w-full flex justify-center items-center bg-[#0D0D0D]">
+      <nav class="w-[1200px] h-[70px] px-5 flex items-center justify-between shadow-lg">
+        <div class="flex items-center justify-center">
+          <h1 class="text-white text-[26px] font-bold ml-7 flex">
+            Pirate <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5151] to-[#993030] duration-300">Live.tv</span>
+          </h1>
+        </div>
+                    
+        <button id="hamburger-btn" class="block md:hidden text-white transition-transform duration-300 transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        
+        <div class="hidden md:flex gap-7 text-white mr-7 text-[16px]">
+          <a href="../../strona_glowna/src/index.html" class="duration-300 hover:text-gray-300">Strona główna</a>
+          <a href="../../lista_transmisji/src/index.html" class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5151] to-[#993030] duration-300 hover:text-[#993030]">Plan transmisji</a>
+          <a href="#" class="duration-300 hover:text-gray-300">Wyniki live</a>
+          <a href="#" class="duration-300 hover:text-gray-300">Forum</a>
+      </div>
+
+      <div id="mobile-menu" class="absolute top-[90px] left-0 w-full max-w-[1410px] mx-auto bg-[#0d0d0de3] backdrop-blur-[15px] text-white flex flex-col items-center gap-5 py-5 shadow-xl z-30 rounded-[25px] mt-5 md:hidden" style="display: none;">
+          <a href="../../strona_glowna/src/index.html" class="duration-300 hover:text-gray-300 py-2 w-full text-center">Strona główna</a>
+          <a href="../../lista_transmisji/src/index.html" class="duration-300 hover:text-gray-300 py-2 w-full text-center">Plan transmisji</a>
+          <a href="#" class="duration-300 hover:text-gray-300 py-2 w-full text-center">Wyniki live</a>
+          <a href="#" class="duration-300 hover:text-gray-300 py-2 w-full text-center">Forum</a>
+      </div>
+      </nav>
+    </div>
+    
+    <!-- Top Info -->
+    <div class="relative w-full flex-col justify-center items-center mb-8">
+      <nav class="w-full h-[30px] bg-[#171717] px-3 flex items-center justify-center text-white">
+        <div class="w-full max-w-[1090px] flex justify-between">
+          <div></div>
+          <div class="flex gap-[25px] text-white">
+            <a href="#"><span class="duration-300 hover:text-white/80 flex justify-center items-center gap-2"><i class='bx bx-log-in' style='color:#ffffff'></i> Logowanie</span></a>
+            <a href="#"><span class="duration-300 hover:text-white/80 flex justify-center items-center gap-2"><i class='bx bx-user-plus' style='color:#ffffff'></i> Rejestracja</span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+<!-- Transmisje -->
+<div class="max-w-screen md:max-w-[1110px] mx-auto md:mt-[25px] px-4 bg-[#0D0D0D] p-8 rounded-0 md:rounded-[25px] flex flex-col md:flex-row md:gap-6 z-10">
+    <!-- Lista transmisji -->
+    <div class="w-full md:max-w-[917px]">
+        <div class="block text-left ml-1 mr-5 md:ml-5 md:mr-0">
+            <h1 class="text-[28px] md:text-[36px] font-bold text-white mb-8">Nazwa</h1>
+            <div class="relative flex mb-8 gap-3 md:gap-5">
+                <a href="#"><button class="flex text-white text-[16px] bg-gradient-to-r from-[#FF5151] to-[#993030] rounded-[15px] p-[24px] pt-[12px] pb-[12px] duration-300 hover:scale-[99%]">
+                    <img class="hidden mr-2 md:block" src="./assets/video.png" draggable="false">Stream 1
+                </button></a>
+                <a href="#"><button class="flex text-white text-[16px] bg-[#2B2B2B] rounded-[15px] p-[24px] pt-[12px] pb-[12px] duration-300 hover:bg-[#1a1a1a] hover:scale-[99%]">
+                    <img class="hidden mr-2 md:block" src="./assets/video.png" draggable="false">Stream 2
+                </button></a>
+                <a href="#"><button class="flex text-white text-[16px] bg-[#2B2B2B] rounded-[15px] p-[24px] pt-[12px] pb-[12px] duration-300 hover:bg-[#1a1a1a] hover:scale-[99%]">
+                    <img class="hidden mr-2 md:block" src="./assets/video.png" draggable="false">Stream 3
+                </button></a>
+            </div>
+            <div class="">
+                <img src="./assets/stream.png" draggable="false">
+            </div>
+            <div class="relative flex mt-8 mb-12 gap-3 md:gap-5">
+                <a href="#"><button class="flex text-white md:text-[16px] bg-gradient-to-r from-[#5865F2] to-[#3C45A7] rounded-[15px] p-[24px] pt-[12px] pb-[12px] duration-300 hover:scale-[99%]">
+                    <img class="hidden mr-2 md:block" src="./assets/dc.png" draggable="false">Dołącz na discorda
+                </button></a>
+                <a href="#"><button class="flex text-white md:text-[16px] bg-gradient-to-r from-[#2AABEE] to-[#229ED9] rounded-[15px] p-[24px] pt-[12px] pb-[12px] duration-300 hover:scale-[99%]">
+                    <img class="hidden mr-2 md:block" src="./assets/tele.png" draggable="false">Dołącz na telegrama
+                </button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center space-y-5 md:space-y-14 md:mr-4">
+      <div class="flex-col w-full">
+          <!-- reklama -->
+          <a href="#">
+              <div class="w-full md:w-[270px] h-[170px] rounded-[25px] relative overflow-hidden md:ml-8 md:mt-5 mt-6">
+                  <div class="absolute top-0 left-0 right-0 h-[30px] text-[16px] bg-gradient-to-r from-[#FF5151] to-[#993030] rounded-t-[25px] flex items-center justify-center z-20">
+                      <span class="text-white font-medium flex"><img class="mr-2" src="./assets/people.png" draggable="false"> Reklama</span>
+                  </div>
+                  <img src="./assets/reklama.png" draggable="false" class="w-full h-full object-cover rounded-b-[25px] duration-300 hover:scale-[105%] z-10">
+              </div>
+          </a>
+      </div>
+  
+      <!-- chat -->
+      <div class="w-full md:w-[270px] h-[360px] rounded-[25px] bg-[#1A1A1A] relative overflow-hidden md:ml-8 md:mt-5 mt-6">
+          <div class="absolute top-0 left-0 right-0 h-[40px] text-[16px] bg-gradient-to-r from-[#FF5151] to-[#993030] rounded-t-[25px] flex items-center justify-center z-20">
+              <span class="text-white font-medium flex"><img class="mr-2" src="./assets/messages.png" draggable="false">Chat</span>
+          </div>
+      </div>
+    </div>  
+</div>
+
+<div class="max-w-screen max-w-[500px] mt-5 md:min-w-[1110px] bg-[#0D0D0D] mx-auto md:mt-[25px] p-8 md:rounded-[25px] md:flex-row md:gap-6 z-10 flex-col items-center justify-center">
+    <div class="text-white flex-col items-center justify-center text-center">
+        <h1 class="text-center text-[32px] font-bold">Przejdź na premium</h1>
+        <span class="text-center text-[18px] text-white/80">Tysiące filmów i seriali premium oraz telewizja w świetnej cenie – już od 23,99 zł/miesiąc!</span><br>
+        <button class="mt-5 px-7 py-[10px] bg-gradient-to-r from-[#993030] to-[#993030] rounded-[15px] font-bold duration-300 hover:bg-[#993030] hover:scale-[98%]"><i class='bx bx-cart-add bx-tada' style="font-size: 18px; margin-top: 2px;"></i> DOŁACZ TERAZ</button>
+    </div>
+</div>
+</main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0D0D0D] text-white py-4 w-full mt-[50px]">
+    <div class="md:max-w-[1150px] mx-auto">
+        <div class="container px-4 flex flex-col md:flex-row items-center justify-between">
+          <p class="text-[20px] font-bold mb-5 md:mb-0">&copy; 2024 PirateLive.tv</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-sm hover:bg-[#1f1f1f] duration-300 bg-[#171717] px-3 py-2 rounded-[10px]"><i class='bx bx-file'></i></a>
+            <a href="#" class="text-sm hover:bg-[#1f1f1f] duration-300 bg-[#171717] px-3 py-2 rounded-[10px]"><i class='bx bxs-badge-check'></i></a>
+            <a href="#" class="text-sm hover:bg-[#1f1f1f] duration-300 bg-[#171717] px-3 py-2 rounded-[10px]"><i class='bx bx-phone'></i></a>
+            <a href="#" class="text-sm hover:bg-[#1f1f1f] duration-300 bg-[#171717] px-3 py-2 rounded-[10px]"><i class='bx bxl-discord-alt'></i></a>
+          </div>
+        </div>
+        <div class="container mx-auto px-2 mt-3 text-center text-[14px] font-light text-white opacity-75">
+          Strona prezentuje jedynie linki (embed) znalezione w sieci. Nadawca potwierdził legalność swojej transmisji na stronie dostawcy streamingu. Administratorzy strony PirateLive.tv nie mają uprawnień ani możliwości weryfikacji legalności nadawanych materiałów. Wszelkie zgłoszenia dotyczące naruszenia praw autorskich należy kierować na adresy mailowe dot. naruszeń dostawcy danego serwisu.
+        </div>
+    </div>
+  </footer>
+
+<!-- js -->
+<script src="./scripts/navbar.js"></script>
+</body>
+</html>
+    
